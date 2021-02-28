@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>| Home</title>
+    {% load static %}
+    <link rel="stylesheet" href="{%static 'hey.css'%}">
+
+</head>
+
+<body>
+    <h2 class="tow">Student Enrollment Form</h2>
+    <div class="container">
+        <form name="form1" method="POST" autocomplete="on">
+            {% csrf_token %}
+            <div class="row">
+                <div class="col-25">
+                    <label for="Name">Candidate Name</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="Name" name="Name" placeholder="Your name..">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="Email">Email </label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="Email" name="Email" placeholder="Your Email..">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="Website">Website</label>
+                </div>
+
+                <div class="col-75">
+                    <input type="text" id="Website" name="Website" placeholder="Your Website..">
+                </div>
+
+
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="Imagelink">Image link</label>
+                </div>
+
+                <div class="col-75">
+                    <input type="text" id="Imagelink" name="Imagelink" placeholder="Your Image link..">
+                </div>
+
+
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="gender">Gender</label>
+                </div>
+                <div class="col-75">
+                    <div class="col-75">
+                        <input type="radio" id="male" name="gender" value="male">
+                        <label for="male">Male</label><br>
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label for="female">Female</label><br>
+                        <input type="radio" id="other" name="gender" value="other">
+                        <label for="other">Other</label>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-25">
+                    <label for="skill">Skills</label>
+                </div>
+                <div class="col-75" >
+                    <div class="col-75" name ="tum">
+                        <input type="checkbox" id="Java" name="Java" value="java">
+                        <label for="java">JAVA</label>
+                        <input type="checkbox" id="HTML" name="HTML" value="HTML">
+                        <label for="HTML">HTML</label>
+                        <input type="checkbox" id="CSS" name="CSS" value="CSS">
+                        <label for="CSS">CSS</label>
+
+                    </div>
+
+                </div>
+            </div>
+
+            
+        </form>
+
+        <div class="row">
+            <input class="ram" type="submit" onclick="myfunction()" value="Enroll student">
+
+            <input class="cow" type="submit" value="Clear">
+        </div>
+
+        <div id="table" class="wow">
+            
+        </div>
+
+    </div>
+
+    
+
+    <script src="{%static 'tune.js'%}"></script> 
+</body>
+
+</html>
